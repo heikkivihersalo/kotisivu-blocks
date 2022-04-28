@@ -1,0 +1,75 @@
+{
+	"name": "ksd/icon",
+	"attributes": {
+		"iconClass": {
+			"type": "string",
+			"default": ""
+		},
+		"iconToggle": {
+			"type": "boolean"
+		},
+		"linkURL": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"linkToggle": {
+			"type": "boolean"
+		},
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number"
+		},
+		"mediaHeight": {
+			"type": "number"
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": "icon-block"
+		},
+		"largeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumLargeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumWidth": {
+			"type": "string"
+		},
+		"mediumHeight": {
+			"type": "string"
+		},
+		"smallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"extraSmallURL": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

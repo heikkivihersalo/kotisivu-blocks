@@ -1,0 +1,22 @@
+{
+	"name": "ksd/pricing-column",
+	"attributes": {
+		"columnClass": {
+			"type": "string",
+			"default": "pricing-table__column"
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"featured": {
+			"type": "boolean"
+		},
+		"ribbon": {
+			"type": "boolean"
+		},
+		"ribbonText": {
+			"type": "string"
+		}
+	}
+}

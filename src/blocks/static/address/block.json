@@ -1,0 +1,17 @@
+{
+	"name": "ksd/address",
+	"attributes": {
+		"addressClass": {
+			"type": "string",
+			"default": ""
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

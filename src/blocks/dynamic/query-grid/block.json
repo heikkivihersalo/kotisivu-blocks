@@ -1,0 +1,23 @@
+{
+	"name": "ksd/query-grid",
+	"attributes": {
+		"postType": {
+			"type": "string",
+			"default": ""
+		},
+		"postCTA": {
+			"type": "string",
+			"default": ""
+		},
+		"postClass": {
+			"type": "string",
+			"default": ""
+		},
+		"hasPadding": {
+			"type": "boolean"
+		},
+		"smallHeading": {
+			"type": "boolean"
+		}
+	}
+}

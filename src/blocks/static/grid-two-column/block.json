@@ -1,0 +1,75 @@
+{
+	"name": "ksd/grid-two-column",
+	"attributes": {
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number"
+		},
+		"mediaHeight": {
+			"type": "number"
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": ""
+		},
+		"largeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumLargeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumWidth": {
+			"type": "string"
+		},
+		"mediumHeight": {
+			"type": "string"
+		},
+		"smallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"extraSmallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"alignment": {
+			"type": "boolean"
+		},
+		"bigHeading": {
+			"type": "boolean"
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"sectionModifiers": {
+			"type": "string",
+			"default": ""
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

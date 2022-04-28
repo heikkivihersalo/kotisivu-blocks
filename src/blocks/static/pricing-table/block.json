@@ -1,0 +1,13 @@
+{
+	"name": "ksd/pricing-table",
+	"attributes": {
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

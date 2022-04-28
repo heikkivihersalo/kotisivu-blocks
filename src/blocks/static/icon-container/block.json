@@ -1,0 +1,13 @@
+{
+	"name": "ksd/icon-container",
+	"attributes": {
+		"variationName": {
+			"type": "string",
+			"default": ""
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		}
+	}
+}

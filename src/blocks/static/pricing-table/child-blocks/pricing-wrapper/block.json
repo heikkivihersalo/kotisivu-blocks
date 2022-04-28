@@ -1,0 +1,17 @@
+{
+	"name": "ksd/pricing-wrapper",
+	"attributes": {
+		"wrapperClass": {
+			"type": "string",
+			"default": ""
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName" : {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

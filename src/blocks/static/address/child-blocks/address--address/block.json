@@ -1,0 +1,26 @@
+{
+	"name": "ksd/address--name",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "h3"
+		},
+		"wrapperClass": {
+			"type": "string",
+			"default": "address__wrapper address__wrapper--name"
+		},
+		"wrapperToggle": {
+			"type": "boolean",
+			"default": false
+		},
+		"iconClass": {
+			"type": "string",
+			"default": ""
+		},
+		"iconToggle": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

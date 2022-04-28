@@ -1,0 +1,95 @@
+{
+	"name": "ksd/grid-card",
+	"attributes": {
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number"
+		},
+		"mediaHeight": {
+			"type": "number"
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": ""
+		},
+		"retinaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"fullURL": {
+			"type": "string",
+			"default": ""
+		},
+		"hugeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"largeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumLargeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumURL": {
+			"type": "string",
+			"default": ""
+		},
+		"smallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"extraSmallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"cardModifiers": {
+			"type": "string",
+			"default": ""
+		},
+		"shadow": {
+			"type": "boolean"
+		},
+		"transparentBackground": {
+			"type": "boolean"
+		},
+		"fullWidth": {
+			"type": "boolean"
+		},
+		"bigHeading": {
+			"type": "boolean"
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"alignment": {
+			"type": "string",
+			"enum": ["left", "center", "right"]
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

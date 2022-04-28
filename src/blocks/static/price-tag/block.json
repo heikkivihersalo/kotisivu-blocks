@@ -1,0 +1,33 @@
+{
+	"name": "ksd/price-tag",
+	"attributes": {
+		"amount": {
+			"type": "string",
+			"default": "999,99"
+		},
+		"priceBig": {
+			"type": "string",
+			"default": "999"
+		},
+		"decimalsToggle": {
+			"type": "boolean",
+			"default": true
+		},
+		"priceDecimals": {
+			"type": "string",
+			"default": "99"
+		},
+		"currency": {
+			"type": "string",
+			"default": "€"
+		},
+		"term": {
+			"type": "string",
+			"default": "month"
+		},
+		"prefix": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"name": "ksd/button",
+	"attributes": {
+		"linkURL": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"linkText": {
+			"type": "string",
+			"default": "Read More"
+		},
+		"hasLinkTarget": {
+			"type": "boolean"
+		},
+		"isPrimary": {
+			"type": "boolean",
+			"default": true
+		},
+		"isSecondary": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasOutline": {
+			"type": "boolean",
+			"default": false
+		},
+		"hasTracking": {
+			"type": "boolean",
+			"default": false
+		},
+		"trackingIdentifier": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

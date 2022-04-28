@@ -1,0 +1,13 @@
+{
+	"name": "ksd/content-list",
+	"attributes": {
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

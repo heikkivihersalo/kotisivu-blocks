@@ -1,0 +1,82 @@
+{
+	"name": "ksd/column-container",
+	"attributes": {
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number"
+		},
+		"mediaHeight": {
+			"type": "number"
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": ""
+		},
+		"retinaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"fullURL": {
+			"type": "string",
+			"default": ""
+		},
+		"hugeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"largeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumLargeURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediumURL": {
+			"type": "string",
+			"default": ""
+		},
+		"smallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"extraSmallURL": {
+			"type": "string",
+			"default": ""
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"containerToggle": {
+			"type": "boolean"
+		},
+		"containerClass": {
+			"type": "string",
+			"default": ""
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}
