@@ -4,8 +4,9 @@ import {
 	useBlockProps
 } from "@wordpress/block-editor";
 
-const Edit = () => {
+import './editor.css';
 
+const Edit = () => {
 	const ALLOWED_BLOCKS = ["ksd/button"];
 	const TEMPLATE = [
 		[

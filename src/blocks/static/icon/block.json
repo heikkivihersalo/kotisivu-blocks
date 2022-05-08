@@ -1,9 +1,27 @@
 {
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
 	"name": "ksd/icon",
+	"title": "Icon",
+	"category": "media",
+	"icon": "format-image",
+	"description": "Add custom images or icon library classes (Font Awesome, Dashicons etc.)",
+	"keywords": ["icon, icons"],
+	"textdomain": "icon",
+	"supports": {
+		"className": false
+	},
+	"parent": ["ksd/icon-container"],
+	"editorScript": "file:../../../../build/js/icon/icon.js",
+	"editorStyle": "file:../../../../build/css/icon.css",
+	"style": "file:../../../../build/css/style-icon.css",
 	"attributes": {
 		"iconClass": {
 			"type": "string",
-			"default": ""
+			"default": "fab fa-facebook"
+		},
+		"hasCustomIcon": {
+			"type": "boolean"
 		},
 		"iconToggle": {
 			"type": "boolean"
@@ -43,33 +61,7 @@
 		},
 		"mediaClass": {
 			"type": "string",
-			"default": "icon-block"
-		},
-		"largeURL": {
-			"type": "string",
-			"default": ""
-		},
-		"mediumLargeURL": {
-			"type": "string",
-			"default": ""
-		},
-		"mediumURL": {
-			"type": "string",
-			"default": ""
-		},
-		"mediumWidth": {
-			"type": "string"
-		},
-		"mediumHeight": {
-			"type": "string"
-		},
-		"smallURL": {
-			"type": "string",
-			"default": ""
-		},
-		"extraSmallURL": {
-			"type": "string",
-			"default": ""
+			"default": "ksd-icon"
 		}
 	}
 }

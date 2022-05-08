@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/column",
+	"title": "Optimized Column",
+	"category": "design",
+	"icon": "columns",
+	"description": "Optimized column for column container",
+	"keywords": ["columns, column"],
+	"textdomain": "optimized-column",
+	"supports": {
+		"className": false
+	},
+	"parent": ["ksd/column-container"],
+	"editorScript": "file:../../../../build/js/column/column.js",
+	"editorStyle": "file:../../../../build/css/column.css",
+	"style": "file:../../../../build/css/style-column.css",
+	"attributes": {
+		"columnClass": {
+			"type": "string",
+			"default": "ksd-column"
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"allowedBlocks": {
+			"type": "array"
+		},
+		"templateLock": {
+			"type": [ "string", "boolean" ],
+			"enum": [ "all", "insert", false ]
+		}
+	}
+}

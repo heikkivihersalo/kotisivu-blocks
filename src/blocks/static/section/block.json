@@ -1,0 +1,92 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/section",
+	"title": "Section",
+	"category": "design",
+	"icon": "columns",
+	"description": "Block for adding semantic sections to the site",
+	"keywords": ["section, container"],
+	"textdomain": "section",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/section/section.js",
+	"editorStyle": "file:../../../../build/css/section.css",
+	"style": "file:../../../../build/css/style-section.css",
+	"attributes": {
+		"sectionClass": {
+			"type": "string",
+			"default": ""
+		},
+		"modifiers": {
+			"type": "string",
+			"default": ""
+		},
+		"alignmentReverse": {
+			"type": "boolean"
+		},
+		"variationName": {
+			"type": "string",
+			"default": ""
+		},
+		"template": {
+			"type": "array",
+			"default": []
+		},
+		"allowedBlocks": {
+			"type": "array"
+		},
+		"templateLock": {
+			"type": [ "string", "boolean" ],
+			"enum": [ "all", "insert", false ]
+		},
+		"hasBackgroundImage": {
+			"type": "boolean"
+		},
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number",
+			"default": ""
+		},
+		"mediaHeight": {
+			"type": "number",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": "ksd-background-image"
+		},
+		"mediaSrcSet": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaSrcSizes": {
+			"type": "string",
+			"default": ""
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		},
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

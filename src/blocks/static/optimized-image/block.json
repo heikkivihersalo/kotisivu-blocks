@@ -1,0 +1,59 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/optimized-image",
+	"title": "Optimized Image",
+	"category": "media",
+	"icon": "format-image",
+	"description": "Super simple image block to replace Gutenberg default image block",
+	"keywords": [ "image" ],
+	"textdomain": "optimized-image",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/optimized-image/optimized-image.js",
+    "editorStyle": "file:../../../../build/css/optimized-image.css",
+    "style": "file:../../../../build/css/style-optimized-image.css",
+	"attributes": {
+		"mediaID": {
+			"type": "number",
+			"default": 0
+		},
+		"mediaURL": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaALT": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaWidth": {
+			"type": "number",
+			"default": ""
+		},
+		"mediaHeight": {
+			"type": "number",
+			"default": ""
+		},
+		"mediaMime": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaClass": {
+			"type": "string",
+			"default": "ksd-optimized-image"
+		},
+		"mediaSrcSet": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaSrcSizes": {
+			"type": "string",
+			"default": ""
+		},
+		"lazyLoad": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

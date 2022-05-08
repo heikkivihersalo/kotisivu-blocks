@@ -1,6 +1,6 @@
 import { __ } from "@wordpress/i18n";
 import { useSelect } from '@wordpress/data';
-import { name as blockName } from './index';
+import { name as blockName } from './block.json';
 import {
 	InnerBlocks,
 	useBlockProps,
@@ -11,6 +11,10 @@ import {
 	store as blocksStore,
 } from '@wordpress/blocks';
 
+import ColumnInserterButton from './components/ColumnInserterButton';
+
+import './editor.css';
+
 const Edit = (props) => {
 	const {
 		attributes: {
@@ -18,6 +22,7 @@ const Edit = (props) => {
 			template
 		},
 		setAttributes,
+		clientId
 	} = props;
 
 	const blockProps = useBlockProps({
@@ -60,7 +65,11 @@ const Edit = (props) => {
 	 */
 	return (
 		<div {...blockProps}>
-			<InnerBlocks template={template} allowedBlocks="ksd/icon"/>
+			<InnerBlocks
+				template={template}
+				allowedBlocks="ksd/icon"
+				renderAppender={() => <ColumnInserterButton clientId={clientId} />}
+			/>
 		</div>
 	);
 };

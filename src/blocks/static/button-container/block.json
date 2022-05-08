@@ -1,5 +1,19 @@
 {
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
 	"name": "ksd/button-container",
+	"title": "Button Container",
+	"category": "design",
+	"icon": "button",
+	"description": "Container for multiple buttons",
+	"keywords": [ "button", "container" ],
+	"textdomain": "button-container",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/button-container/button-container.js",
+    "editorStyle": "file:../../../../build/css/button-container.css",
+    "style": "file:../../../../build/css/style-button-container.css",
 	"attributes": {
 	}
 }

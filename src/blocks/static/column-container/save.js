@@ -1,17 +1,26 @@
 import { __ } from "@wordpress/i18n";
-import { InnerBlocks } from "@wordpress/block-editor";
+import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 
-import { Markup } from "../../../components/image";
-import ColumnContainer from './columnContainer';
+import ContainerWrapper from './components/ContainerWrapper';
+import {calculateColumnClass} from './calculateColumnClass.js';
 
 const Save = (props) => {
+	const {
+		attributes: {
+			columnCount,
+			modifiers
+		}
+	} = props;
+
+	const blockProps = useBlockProps.save({
+		className: `ksd-column-container ${calculateColumnClass(columnCount)} ${modifiers}`
+	})
 
 	return (
 		<>
-			<ColumnContainer {...props} >
-				<InnerBlocks.Content />
-			</ColumnContainer>
-			<Markup {...props} />
+			<ContainerWrapper children={props.children} attributes={props.attributes} classes={blockProps.className}>
+				<InnerBlocks.Content {...blockProps}/>
+			</ContainerWrapper>
 		</>
 	);
 };

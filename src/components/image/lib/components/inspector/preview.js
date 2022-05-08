@@ -6,7 +6,7 @@ import {
 import {
     Button
 } from "@wordpress/components";
-import { removeImage, setImage } from '../../utilities/image';
+import { removeImage, setImage } from '../../../../../utilities/image';
 
 const Preview = (props) => {
     const {

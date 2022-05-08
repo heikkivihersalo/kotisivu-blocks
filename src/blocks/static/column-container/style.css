@@ -1,0 +1,32 @@
+.ksd-column-container {
+	display: grid;
+}
+
+/**
+ * Columns
+ */
+
+.ksd-column-container.has-columns-1 {
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.ksd-column-container.has-columns-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.ksd-column-container.has-columns-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.ksd-column-container.has-columns-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.ksd-column-container.has-columns-5 {
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.ksd-column-container.has-columns-6 {
+	grid-template-columns: repeat(6, 1fr);
+}
+

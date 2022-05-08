@@ -1,17 +1,33 @@
 import { __ } from "@wordpress/i18n";
+import { registerBlockType } from '@wordpress/blocks';
 import edit from "./edit";
 import save from "./save";
+import metadata from './block.json';
+import './style.css';
 
-export const name = 'ksd/button';
+const {
+    apiVersion,
+    name,
+    title,
+    category,
+    icon,
+    description,
+    keywords,
+    textdomain,
+    supports,
+} = metadata;
+
 export const settings = {
-	apiVersion: 2,
-    title: __('Button', 'kotisivu-theme-blocks'),
-    description: __('Default button that follows theme global styling', 'kotisivu-theme-blocks'),
-    category: 'design',
-    icon: 'button',
-    supports: {
-        className: false
-    },
+    apiVersion: apiVersion,
+    title: __(title, 'kotisivu-theme-blocks'),
+    description: __(description, 'kotisivu-theme-blocks'),
+    category: category,
+    icon: icon,
+    supports: supports,
+    keywords: keywords,
+    textdomain: textdomain,
     edit,
     save
 }
+
+registerBlockType(name, settings);

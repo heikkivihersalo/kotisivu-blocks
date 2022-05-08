@@ -3,7 +3,7 @@ import {
     MediaUpload,
     MediaUploadCheck
 } from "@wordpress/block-editor";
-import { getImage, setImage } from '../../utilities/image';
+import { getImage, setImage } from '../../../../../utilities/image';
 
 const SelectorButton = (props) => {
     const {

@@ -1,5 +1,19 @@
 {
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
 	"name": "ksd/button",
+	"title": "Button",
+	"category": "design",
+	"icon": "button",
+	"description": "Default button that follows theme global styling",
+	"keywords": [ "button" ],
+	"textdomain": "button",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/button/button.js",
+    "editorStyle": "file:../../../../build/css/button.css",
+    "style": "file:../../../../build/css/style-button.css",
 	"attributes": {
 		"linkURL": {
 			"type": "string",

@@ -11,8 +11,8 @@ const Selector = (props) => {
 
     return (
         <>
-            <SelectorButton {...props} />
-            {mediaURL && <Preview {...props} />}
+            <SelectorButton {...props}/>
+            {mediaURL && <Preview {...props}/>}
             <Lazyload {...props} />
         </>
     );

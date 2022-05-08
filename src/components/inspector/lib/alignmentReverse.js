@@ -9,8 +9,8 @@ import {
 const AlignmentReverse = (props) => {
     const {
         attributes: {
-            sectionModifiers,
-            alignment,
+            modifiers,
+            alignmentReverse,
         },
     } = props;
 
@@ -18,9 +18,9 @@ const AlignmentReverse = (props) => {
         <>
             <PanelRow>
                 <ToggleControl
-                    label={__('Block Alignment', 'kotisivu-theme-blocks')}
-                    checked={alignment}
-                    onChange={addModifiers(props, "alignment", alignment, "is-reversed", "sectionModifiers", sectionModifiers)}
+                    label={__('Reverse Block Alignment', 'kotisivu-theme-blocks')}
+                    checked={alignmentReverse}
+                    onChange={addModifiers(props, "alignmentReverse", alignmentReverse, "is-reversed", "modifiers", modifiers)}
                 />
             </PanelRow>
         </>

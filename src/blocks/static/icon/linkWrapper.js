@@ -4,8 +4,8 @@ const LinkWrapper = ({ children, attributes, editor }) => {
 		return (
             <>
                 {editor
-                    ? <a class="icon__link">{children}</a>
-                    : <a class="icon__link" href={attributes.linkURL} title={attributes.linkTitle}>{children}</a>
+                    ? <a className="icon__link">{children}</a>
+                    : <a className="icon__link" href={attributes.linkURL} title={attributes.linkTitle}>{children}</a>
                 }
             </>
 		);

@@ -1,0 +1,66 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/image-gallery",
+	"title": "Optimized Image Gallery",
+	"category": "media",
+	"icon": "format-image",
+	"description": "Optimized simple image gallery",
+	"keywords": [ "image", "gallery" ],
+	"textdomain": "image-gallery",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/image-gallery/image-gallery.js",
+    "editorStyle": "file:../../../../build/css/image-gallery.css",
+    "style": "file:../../../../build/css/style-image-gallery.css",
+	"attributes": {
+		"sectionHeading": {
+			"type": "string",
+			"default": ""
+		},
+		"images": {
+			"type": "array",
+			"source": "query",
+			"selector": "img",
+			"default": [],
+			"query": {
+				"mediaID": {
+					"type": "number",
+					"source": "attribute",
+					"attribute": "data-id"
+				},
+				"mediaURL": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "src"
+				},
+				"mediaALT": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "alt"
+				},
+				"mediaWidth": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "width"
+				},
+				"mediaHeight": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "height"
+				},
+				"mediaMime": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "type"
+				},
+				"lazyLoad": {
+					"type": "string",
+					"source": "attribute",
+					"attribute": "loading"
+				}
+			}
+		}
+	}
+}

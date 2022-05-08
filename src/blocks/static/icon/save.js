@@ -9,7 +9,7 @@ const Save = (props) => {
 
 	return (
 		<LinkWrapper children={props.children} attributes={props.attributes}>
-			{iconToggle ? <i className={`icon ${iconClass}`}></i> : <Markup {...props} />}
+			{!iconToggle ? <i className={`icon ${iconClass}`}></i> : <Markup {...props} img />}
 		</LinkWrapper>
 	);
 };

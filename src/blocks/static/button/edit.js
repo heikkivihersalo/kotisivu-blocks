@@ -3,6 +3,8 @@ import Inspector from './components/Inspector'
 import Buttons from './components/Buttons'
 import { useBlockProps } from "@wordpress/block-editor"
 
+import './editor.css';
+
 const Edit = (props) => {
 	const {
 		attributes: {

@@ -1,99 +1,53 @@
 import { __ } from "@wordpress/i18n";
-import { useSelect } from '@wordpress/data';
-import { name as blockName } from './index';
 
 import {
 	InnerBlocks,
-	useBlockProps,
-	InspectorControls,
-	__experimentalBlockVariationPicker as BlockVariationPicker,
+	useBlockProps
 } from "@wordpress/block-editor";
 
-import {
-	store as blocksStore,
-} from '@wordpress/blocks';
+import ContainerWrapper from './components/ContainerWrapper';
+import ColumnInserterButton from './components/ColumnInserterButton';
+import Inspector from './components/Inspector';
+import { calculateColumnClass } from './calculateColumnClass';
 
-import {
-	PanelBody,
-	ToggleControl,
-	TextControl
-} from "@wordpress/components";
+import './editor.css';
 
-import { Markup, SidebarSelector } from '../../../components/image'
-import ColumnContainer from './columnContainer';
+const ALLOWED_BLOCKS = ["ksd/column"];
 
 const Edit = (props) => {
 	const {
 		attributes: {
-			variationName,
 			template,
-			containerToggle,
-			containerClass
+			templateLock,
+			columnCount,
+			columnLock,
+			modifiers
 		},
-		setAttributes,
+		clientId
 	} = props;
 
-	const ALLOWED_BLOCKS = ["ksd/grid-column"];
-
 	const blockProps = useBlockProps({
-		className: "column-container"
+		className: `ksd-column-container ${calculateColumnClass(columnCount)} ${modifiers}`
 	});
-	/**
-	  * Get block variations
-	  */
-	const blockVariations = useSelect(
-		(select) => {
-			const { getBlockVariations } = select(blocksStore);
-			return getBlockVariations(blockName, 'block');
-		},
-		[blockName]
-	);
-
-
-	/**
-	 * If variation isn't selected, render variation select screen
-	 */
-	if (!variationName) {
-		return (
-			<BlockVariationPicker
-				label={__('Choose variation')}
-				instructions={__('Select a variation to start with.')}
-				onSelect={(variation) =>
-					setAttributes({
-						variationName: variation.name,
-						mediaClass: variation.attributes.mediaClass,
-						template: variation.innerBlocks
-					})
-				}
-				variations={blockVariations}
-			/>)
-	}
 
 	/**
 	 * Else render block
 	 */
 	return (
 		<div {...blockProps}>
-			<InspectorControls>
-				<SidebarSelector {...props} />
-				<PanelBody title={__("Container Settings", "kotisivu-theme-blocks")} initialOpen={true}>
-					<TextControl
-						label={__('Container Class', 'kotisivu-theme-blocks')}
-						onChange={(content) => setAttributes({ containerClass: content })}
-						value={containerClass}
-					/>
-					<ToggleControl
-						label={__('Column Container', 'kotisivu-theme-blocks')}
-						checked={containerToggle}
-						onChange={() => setAttributes({ containerToggle: !containerToggle })}
-					/>
-				</PanelBody>
-			</InspectorControls>
-
-			<ColumnContainer {...props}>
-				<InnerBlocks orientation="horizontal" template={template} allowedBlocks={ALLOWED_BLOCKS} />
-			</ColumnContainer>
-			<Markup {...props} />
+			<Inspector {...props} />
+			<ContainerWrapper children={props.children} attributes={props.attributes} classes={blockProps.className}>
+				<InnerBlocks
+					allowedBlocks={ALLOWED_BLOCKS}
+					template={template}
+					templateLock={templateLock}
+					renderAppender={
+						columnLock
+							? undefined
+							: () => <ColumnInserterButton clientId={clientId}/>
+						}
+				/>
+			</ContainerWrapper>
 		</div>
 	);
 };

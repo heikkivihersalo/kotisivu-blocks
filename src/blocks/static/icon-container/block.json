@@ -1,5 +1,19 @@
 {
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
 	"name": "ksd/icon-container",
+	"title": "Icon Container",
+	"category": "media",
+	"icon": "filter",
+	"description": "Container that can hold multiple icons",
+	"keywords": [ "container, icon, icons" ],
+	"textdomain": "icon-container",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/icon-container/icon-container.js",
+    "editorStyle": "file:../../../../build/css/icon-container.css",
+    "style": "file:../../../../build/css/style-icon-container.css",
 	"attributes": {
 		"variationName": {
 			"type": "string",
