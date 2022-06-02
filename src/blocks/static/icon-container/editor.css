@@ -1,0 +1,5 @@
+.icon-container .block-editor-block-list__layout {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}

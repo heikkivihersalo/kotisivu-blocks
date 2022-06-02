@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/blog-grid",
+	"title": "Blog Grid",
+	"category": "media",
+	"icon": "format-image",
+	"description": "Grid view of blog posts",
+	"keywords": ["blog, grid"],
+	"textdomain": "kotisivu-theme-blocks",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/blog-grid/blog-grid.js",
+	"editorStyle": "file:../../../../build/css/blog-grid.css",
+	"style": "file:../../../../build/css/style-blog-grid.css",
+	"attributes": {
+		"maxPosts": {
+			"type": "number"
+		}
+	}
+}

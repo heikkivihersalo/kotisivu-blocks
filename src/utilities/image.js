@@ -95,15 +95,12 @@ export const setImage = (media, props) => {
     /**
      * Set block attributes
      */
-    if (media.mime == "image/svg+xml" || props.img || props.srcset) {
-        const imageSizes = getImageSizes(media.sizes);
+    if (media.mime == "image/svg+xml") {
         props.setAttributes({
             mediaURL: media.url,
             mediaID: media.id,
             mediaALT: media.alt,
             mediaMime: media.mime,
-            mediaSrcSet: convertToSrcSet(imageSizes),
-            mediaSrcSizes: convertToSizes(imageSizes)
         })
     } else {
         const imageSizes = getImageSizes(media.sizes);
@@ -114,7 +111,8 @@ export const setImage = (media, props) => {
             mediaMime: media.mime,
             mediaWidth: media.width,
             mediaHeight: media.height,
-            sizes: imageSizes,
+            mediaSrcSet: convertToSrcSet(imageSizes),
+            mediaSrcSizes: convertToSizes(imageSizes)
         });
     }
 }

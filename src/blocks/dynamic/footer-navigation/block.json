@@ -1,0 +1,18 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/footer-navigation",
+	"title": "Footer Navigation",
+	"category": "media",
+	"icon": "format-image",
+	"description": "Simplified footer navigation",
+	"keywords": ["footer, navigation"],
+	"textdomain": "kotisivu-theme-blocks",
+	"supports": {
+		"className": false
+	},
+	"editorStyle": "file:../../../../build/css/footer-navigation.css",
+	"style": "file:../../../../build/css/style-footer-navigation.css",
+	"attributes": {
+	}
+}

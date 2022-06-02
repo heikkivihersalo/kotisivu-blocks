@@ -1,0 +1,57 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/address--phone",
+	"title": "Phone",
+	"category": "design",
+	"icon": "phone",
+	"description": "Simple phone field for contact information",
+	"keywords": ["phone, tel"],
+	"textdomain": "kotisivu-theme-blocks",
+	"supports": {
+		"className": false
+	},
+	"parent": ["ksd/address"],
+	"editorScript": "file:../../../../build/js/address--phone/address--phone.js",
+	"editorStyle": "file:../../../../build/css/address--phone.css",
+	"style": "file:../../../../build/css/style-address--phone.css",
+	"attributes": {
+		"post": {
+			"type": "object"
+		},
+		"linkURL": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTitle": {
+			"type": "string",
+			"default": ""
+		},
+		"linkText": {
+			"type": "string",
+			"default": ""
+		},
+		"linkTarget": {
+			"type": "string"
+		},
+		"linkRel": {
+			"type": "string"
+		},
+		"iconClass": {
+			"type": "string",
+			"default": "fas fa-phone"
+		},
+		"iconToggle": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasTracking": {
+			"type": "boolean",
+			"default": false
+		},
+		"trackingIdentifier": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}

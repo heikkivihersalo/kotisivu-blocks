@@ -7,7 +7,7 @@
 	"icon": "columns",
 	"description": "Optimized column for column container",
 	"keywords": ["columns, column"],
-	"textdomain": "optimized-column",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

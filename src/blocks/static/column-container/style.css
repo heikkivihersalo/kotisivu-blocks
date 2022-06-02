@@ -1,32 +1,70 @@
-.ksd-column-container {
+:where(.ksd-column-container) {
 	display: grid;
+	justify-items: center;
+    align-items: center;
+	gap: var(--spacing-m, 2rem);
 }
 
 /**
  * Columns
  */
 
-.ksd-column-container.has-columns-1 {
-	grid-template-columns: repeat(1, 1fr);
+:where(.ksd-column-container.has-columns-1),
+:where(.ksd-column-container.has-columns-2),
+:where(.ksd-column-container.has-columns-3),
+:where(.ksd-column-container.has-columns-4),
+:where(.ksd-column-container.has-columns-5),
+:where(.ksd-column-container.has-columns-6) {
+	grid-template-columns: repeat(1, minmax(0,1fr));
 }
 
-.ksd-column-container.has-columns-2 {
-	grid-template-columns: repeat(2, 1fr);
+@media (min-width: 800px) {
+	:where(.ksd-column-container.has-columns-1) {
+		grid-template-columns: repeat(1, minmax(0,1fr));
+	}
+
+	:where(.ksd-column-container.has-columns-2) {
+		grid-template-columns: repeat(2, minmax(0,1fr));
+	}
+
+	:where(.ksd-column-container.has-columns-3) {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+
+	:where(.ksd-column-container.has-columns-4) {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+
+	:where(.ksd-column-container.has-columns-5) {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+
+	:where(.ksd-column-container.has-columns-6) {
+		grid-template-columns: repeat(3, minmax(0,1fr));
+	}
+
+	/**
+	 * Modifiers
+	 */
+	:where(.ksd-column-container.is-reversed div:first-child) {
+		grid-area: 1 / 2;
+	}
+	
+	:where(.ksd-column-container.is-reversed div:last-child) {
+		grid-area: 1 / 1;
+	}
 }
 
-.ksd-column-container.has-columns-3 {
-	grid-template-columns: repeat(3, 1fr);
-}
+@media (min-width: 1000px) {
+	:where(.ksd-column-container.has-columns-4) {
+		grid-template-columns: repeat(4, minmax(0,1fr));
+	}
 
-.ksd-column-container.has-columns-4 {
-	grid-template-columns: repeat(4, 1fr);
-}
+	:where(.ksd-column-container.has-columns-5) {
+		grid-template-columns: repeat(5, minmax(0,1fr));
+	}
 
-.ksd-column-container.has-columns-5 {
-	grid-template-columns: repeat(5, 1fr);
+	:where(.ksd-column-container.has-columns-6) {
+		grid-template-columns: repeat(6, minmax(0,1fr));
+	}
 }
-
-.ksd-column-container.has-columns-6 {
-	grid-template-columns: repeat(6, 1fr);
-}
-

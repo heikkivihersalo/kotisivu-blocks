@@ -7,7 +7,7 @@
 	"icon": "format-image",
 	"description": "Optimized simple image gallery",
 	"keywords": [ "image", "gallery" ],
-	"textdomain": "image-gallery",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

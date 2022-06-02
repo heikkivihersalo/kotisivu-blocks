@@ -1,74 +1,132 @@
 import { __ } from "@wordpress/i18n";
 import { EventTracking } from "../../../../components/inspector";
+import { useState, useEffect, useRef } from '@wordpress/element';
+
+import { link, linkOff } from '@wordpress/icons';
 
 import {
     InspectorControls,
+    BlockControls,
+    __experimentalLinkControl as LinkControl
 } from "@wordpress/block-editor";
 
 import {
-    PanelBody,
-    TextControl,
-    ToggleControl
+    ToolbarButton,
+    Popover
 } from "@wordpress/components";
 
 const Inspector = (props) => {
     const {
         attributes: {
+            post,
             linkURL,
-            linkTitle,
-            linkText,
-            hasLinkTarget,
-            isPrimary,
-            isSecondary,
-            hasOutline,
+            linkTarget,
+            linkRel
         },
+        isSelected,
         setAttributes,
     } = props;
 
+    const ref = useRef();
+    const richTextRef = useRef();
+    const [isEditingURL, setIsEditingURL] = useState(false);
+    const opensInNewTab = linkTarget === '_blank';
+    const isURLSet = !!linkURL;
+
+    const onToggleOpenInNewTab = (value) => {
+        const newLinkTarget = value ? '_blank' : undefined;
+
+        let updatedRel = linkRel;
+        if (newLinkTarget && !linkRel) {
+            updatedRel = 'noreferrer noopener';
+        } else if (!newLinkTarget && linkRel === 'noreferrer noopener') {
+            updatedRel = undefined;
+        }
+
+        setAttributes({
+            linkTarget: newLinkTarget,
+            linkRel: updatedRel,
+        });
+    }
+
+    const unlink = () => {
+        setAttributes({
+            post: undefined,
+            linkURL: undefined,
+            linkTarget: undefined,
+            linkRel: undefined
+        });
+        setIsEditingURL(false);
+    }
+
+    const startEditing = (event) => {
+        event.preventDefault();
+        setIsEditingURL(true);
+    }
+
+    useEffect(() => {
+        if (!isSelected) {
+            setIsEditingURL(false);
+        }
+    }, [isSelected]);
+
     return (
-        <InspectorControls>
-            <PanelBody title={__('Button Settings', 'kotisivu-theme-blocks')} initialOpen={true}>
-                <TextControl
-                    label={__('URL', 'kotisivu-theme-blocks')}
-                    placeholder={__('url', 'kotisivu-theme-blocks')}
-                    onChange={(content) => setAttributes({ linkURL: content })}
-                    value={linkURL}
-                />
-                <TextControl
-                    label={__('Text', 'kotisivu-theme-blocks')}
-                    placeholder={__('text', 'kotisivu-theme-blocks')}
-                    onChange={(content) => setAttributes({ linkText: content })}
-                    value={linkText}
-                />
-                <TextControl
-                    label={__('Title', 'kotisivu-theme-blocks')}
-                    placeholder={__('title', 'kotisivu-theme-blocks')}
-                    onChange={(content) => setAttributes({ linkTitle: content })}
-                    value={linkTitle}
-                />
-                <ToggleControl
-                    label={__('Open in a new window', 'kotisivu-theme-blocks')}
-                    checked={hasLinkTarget}
-                    onChange={() => setAttributes({ hasLinkTarget: !hasLinkTarget })}
-                />
-                <ToggleControl
-                    label={__('Primary Color', 'kotisivu-theme-blocks')}
-                    checked={isPrimary}
-                    onChange={() => setAttributes({ isPrimary: !isPrimary })}
-                />
-                <ToggleControl
-                    label={__('Secondary Color', 'kotisivu-theme-blocks')}
-                    checked={isSecondary}
-                    onChange={() => setAttributes({ isSecondary: !isSecondary })}
-                />
-                <ToggleControl
-                    label={__('Outline Toggle', 'kotisivu-theme-blocks')}
-                    checked={hasOutline}
-                    onChange={() => setAttributes({ hasOutline: !hasOutline })}
-                />
-            </PanelBody>
-            <EventTracking {...props} />
-        </InspectorControls>
+        <>
+            <BlockControls group="block">
+                {!isURLSet && (
+                    <ToolbarButton
+                        name="link"
+                        icon={link}
+                        title={__('Link')}
+                        onClick={startEditing}
+                    />
+                )}
+                {isURLSet && (
+                    <ToolbarButton
+                        name="link"
+                        icon={linkOff}
+                        title={__('Unlink')}
+                        onClick={unlink}
+                        isActive={true}
+                    />
+                )}
+            </BlockControls>
+            {isSelected && (isEditingURL || isURLSet) && (
+                <Popover
+                    position="bottom center"
+                    onClose={() => {
+                        setIsEditingURL(false);
+                        richTextRef.current?.focus();
+                    }}
+                    anchorRef={ref?.current}
+                    focusOnMount={isEditingURL ? 'firstElement' : false}
+                    __unstableSlotName={'__unstable-block-tools-after'}
+                >
+                    <LinkControl
+                        value={post}
+                        onChange={(newPost) => {
+                            setAttributes({
+                                post: newPost,
+                                linkURL: newPost.url,
+                                linkTitle: newPost.title
+                            });
+
+                            if (opensInNewTab !== newPost.opensInNewTab) {
+                                onToggleOpenInNewTab(newPost.opensInNewTab);
+                            }
+                        }}
+                        onRemove={() => {
+                            unlink();
+                            richTextRef.current?.focus();
+                        }}
+                        forceIsEditingLink={isEditingURL}
+                    />
+                </Popover>
+            )}
+            <InspectorControls>
+                <EventTracking {...props} />
+            </InspectorControls>
+        </>
     )
 }
 

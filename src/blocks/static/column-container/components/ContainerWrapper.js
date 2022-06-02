@@ -1,6 +1,4 @@
 const ContainerWrapper = ({children, attributes, classes}) => {
-	console.log(children, classes, attributes);
-	
 	if (attributes.wrapperToggle) {
 		return (
 			<>

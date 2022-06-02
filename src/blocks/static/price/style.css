@@ -1,0 +1,16 @@
+:where(.ksd-price) {
+    --fallback-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25em;
+
+    font-size: var(--ff-h3, var(--fallback-size));
+    font-weight: 900;
+}
+
+:where(.ksd-price .prefix),
+:where(.ksd-price .suffix) {
+    font-size: var(--ff-h5, calc(var(--fallback-size) * 0.5));
+    font-weight: 500;
+}

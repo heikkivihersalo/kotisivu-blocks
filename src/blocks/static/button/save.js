@@ -1,26 +1,39 @@
 import { __ } from "@wordpress/i18n";
 import {
-	useBlockProps
+	useBlockProps,
+	RichText
 } from "@wordpress/block-editor";
-
-import Buttons from './components/Buttons';
 
 const Save = (props) => {
 	const {
 		attributes: {
-			isPrimary,
-			isSecondary,
-			hasOutline,
+			linkURL,
+			linkTitle,
+			linkTarget,
+			linkText,
+			linkRel,
+			hasTracking,
+			trackingIdentifier
 		},
 	} = props;
-	
+
 	const blockProps = useBlockProps.save({
-		className: `btn${isPrimary ? ' btn--clr-primary' : ''}${isSecondary ? ' btn--clr-secondary' : ''}${hasOutline ? ' btn--outline' : ''}`
+		className: `btn`
 	});
 
 	return (
 		<>
-			<Buttons props={props} blockProps={blockProps} />
+			<RichText.Content
+				{...blockProps}
+				tagName="a"
+				href={linkURL}
+				title={linkTitle}
+				value={linkText}
+				target={linkTarget}
+				rel={linkRel}
+				data-track={`${hasTracking ? "1" : "0"}`}
+				data-identifier={trackingIdentifier}
+			/>
 		</>
 	);
 };

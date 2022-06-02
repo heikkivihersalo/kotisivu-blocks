@@ -29,7 +29,8 @@ const Edit = (props) => {
 			modifiers,
 			hasBackgroundImage,
 			templateLock,
-			allowedBlocks
+			allowedBlocks,
+			alignmentReverse
 		},
 		setAttributes,
 		clientId,
@@ -86,7 +87,8 @@ const Edit = (props) => {
 						variationName: variation.name,
 						template: variation.innerBlocks,
 						sectionClass: variation.attributes.sectionClass,
-						mediaClass: variation.attributes.mediaClass
+						mediaClass: variation.attributes.mediaClass,
+						alignmentReverse: variation.attributes.alignmentReverse
 					})
 				}
 				variations={blockVariations}

@@ -1,0 +1,45 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/price",
+	"title": "Price",
+	"category": "design",
+	"icon": "columns",
+	"description": "Add price to a section",
+	"keywords": ["price"],
+	"textdomain": "kotisivu-theme-blocks",
+	"supports": {
+		"className": false
+	},
+	"editorScript": "file:../../../../build/js/price/price.js",
+	"editorStyle": "file:../../../../build/css/price.css",
+	"style": "file:../../../../build/css/style-price.css",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "span.price",
+			"default": "99,99"
+		},
+		"prefix": {
+			"type": "string",
+			"source": "html",
+			"selector": "span.prefix",
+			"default": "Alkaen"
+		},
+		"suffix": {
+			"type": "string",
+			"source": "html",
+			"selector": "span.suffix",
+			"default": "€"
+		},
+		"hasPrefix": {
+			"type": "boolean",
+			"default": true
+		},
+		"hasSuffix": {
+			"type": "boolean",
+			"default": true
+		}
+	}
+}

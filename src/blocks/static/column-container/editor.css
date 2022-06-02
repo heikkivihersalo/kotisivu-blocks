@@ -1,7 +1,10 @@
+.ksd-column-container {
+	justify-items: initial;
+}
+
 .ksd-column-container
 	.block-editor-block-list__layout:not(.wp-block-ksd-column) {
 	display: grid;
-	max-width: calc(100% - 5rem);
 	margin-inline: auto;
 	margin-bottom: 3em;
 }
@@ -17,7 +20,7 @@
 }
 
 .ksd-column-container.has-columns-3
-	.block-editor-block-list__layout:not(.wp-block-ksd-column) {
+	.block-editor-block-list__layout:not(.wp-block-ksd-column):not(.wp-block-group__inner-container) {
 	grid-template-columns: repeat(3, 1fr);
 }
 
@@ -40,4 +43,25 @@
 :is(.has-columns-1, .has-columns-2, .has-columns-3, .has-columns-4, .has-columns-5, .has-columns-6).ksd-column-container[data-type="ksd/column-container"],
 .ksd-column-container > .block-editor-block-list__block.ksd-column-container {
 	grid-template-columns: initial;
+}
+
+/* */
+
+.hero .has-columns-1 .block-editor-block-list__layout {
+	grid-template-columns: initial !important;
+}
+
+.has-columns-1 div {
+	max-height: initial;
+}
+
+/**
+ * Modifiers
+ */
+.ksd-column-container.is-reversed div:first-child {
+	grid-area: 1 / 2;
+}
+
+.ksd-column-container.is-reversed div:last-child {
+	grid-area: 1 / 1;
 }

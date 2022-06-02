@@ -7,7 +7,7 @@
 	"icon": "button",
 	"description": "Container for multiple buttons",
 	"keywords": [ "button", "container" ],
-	"textdomain": "button-container",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

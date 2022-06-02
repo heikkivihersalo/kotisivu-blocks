@@ -7,7 +7,7 @@
 	"icon": "screenoptions",
 	"description": "Container for multiple columns. Can be used to build grid layouts.",
 	"keywords": [ "container, columns, column" ],
-	"textdomain": "column-container",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

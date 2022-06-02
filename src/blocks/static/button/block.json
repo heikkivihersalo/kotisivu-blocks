@@ -7,14 +7,19 @@
 	"icon": "button",
 	"description": "Default button that follows theme global styling",
 	"keywords": [ "button" ],
-	"textdomain": "button",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
-		"className": false
+		"className": false,
+		"reusable": false,
+		"anchor": true
 	},
 	"editorScript": "file:../../../../build/js/button/button.js",
     "editorStyle": "file:../../../../build/css/button.css",
     "style": "file:../../../../build/css/style-button.css",
 	"attributes": {
+		"post": {
+			"type": "object"
+		},
 		"linkURL": {
 			"type": "string",
 			"default": ""
@@ -27,20 +32,11 @@
 			"type": "string",
 			"default": "Read More"
 		},
-		"hasLinkTarget": {
-			"type": "boolean"
+		"linkTarget": {
+			"type": "string"
 		},
-		"isPrimary": {
-			"type": "boolean",
-			"default": true
-		},
-		"isSecondary": {
-			"type": "boolean",
-			"default": false
-		},
-		"hasOutline": {
-			"type": "boolean",
-			"default": false
+		"linkRel": {
+			"type": "string"
 		},
 		"hasTracking": {
 			"type": "boolean",
@@ -50,5 +46,10 @@
 			"type": "string",
 			"default": ""
 		}
-	}
+	},
+	"styles": [
+		{ "name": "clr--primary", "label": "Primary", "isDefault": true },
+		{ "name": "clr--secondary", "label": "Secondary" },
+		{ "name": "clr--outline", "label": "Outline" }
+	]
 }

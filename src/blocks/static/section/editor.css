@@ -1,5 +1,10 @@
-.ksd-section.has-columns {
+.ksd-section.has-columns,
+section.hero.has-columns {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     width: 100%;
+}
+
+.ksd-section.has-columns.is-reversed div:first-child {
+    width: 100% !important;
 }

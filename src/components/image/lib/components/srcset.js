@@ -1,4 +1,4 @@
-const ImgSrcSet = (props) => {
+const SrcSet = (props) => {
     return (
         <img
             loading={`${props.attributes.lazyLoad ? "lazy" : "eager"}`}
@@ -13,4 +13,4 @@ const ImgSrcSet = (props) => {
     )
 }
 
-export default ImgSrcSet
+export default SrcSet

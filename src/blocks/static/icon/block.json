@@ -7,7 +7,7 @@
 	"icon": "format-image",
 	"description": "Add custom images or icon library classes (Font Awesome, Dashicons etc.)",
 	"keywords": ["icon, icons"],
-	"textdomain": "icon",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

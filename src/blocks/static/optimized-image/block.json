@@ -7,7 +7,7 @@
 	"icon": "format-image",
 	"description": "Super simple image block to replace Gutenberg default image block",
 	"keywords": [ "image" ],
-	"textdomain": "optimized-image",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},

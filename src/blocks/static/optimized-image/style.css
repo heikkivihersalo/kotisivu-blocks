@@ -1,3 +1,4 @@
-.ksd-optimized-image {
+:where(.ksd-optimized-image) {
     width: 100%;
+    height: auto;
 }

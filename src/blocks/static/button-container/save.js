@@ -1,10 +1,14 @@
 import { __ } from "@wordpress/i18n";
-import { InnerBlocks } from "@wordpress/block-editor";
+import { InnerBlocks, useBlockProps } from "@wordpress/block-editor";
 
 const Save = () => {
 
+	const blockProps = useBlockProps.save({
+		className: 'btn-container'
+	});
+
 	return (
-		<div className="btn-container">
+		<div {...blockProps}>
 			<InnerBlocks.Content/>
 		</div>
 	);

@@ -12,27 +12,25 @@ const Edit = () => {
 		[
 			"ksd/button",
 				{ 
-					isPrimary: true ,
-					isSecondary: false
+					className: 'is-style-clr--primary'
 				}
 		],
 		[
 			"ksd/button",
 				{ 
-					isPrimary: false ,
-					isSecondary: true
+					className: 'is-style-clr--secondary'
 				}
 		],
 	];
 
-	const blockProps = useBlockProps();
+	const blockProps = useBlockProps({
+		className: 'btn-container'
+	});
 
 	return (
-		<div {...blockProps}>
-			<div className="btn-container">
+			<div {...blockProps}>
 				<InnerBlocks orientation="horizontal" template={TEMPLATE} allowedBlocks={ALLOWED_BLOCKS} />
 			</div>
-		</div>
 	);
 };
 

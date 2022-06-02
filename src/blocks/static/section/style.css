@@ -11,39 +11,51 @@
   1.0 General
 --------------------------------------------------------------*/
 
-.ksd-section .hero__heading,
-.ksd-section .section__heading {
+:where(.ksd-section .hero__heading),
+:where(.ksd-section .section__heading) {
 	margin-top: 0;
 	margin-bottom: var(--spacing-xs);
 }
 
-.ksd-section .hero__paragraph,
-.ksd-section .section__paragraph {
+:where(.ksd-section p) {
 	margin-top: 0;
-	margin-bottom: var(--spacing-s);
+	margin-bottom: var(--spacing-xs);
 }
 
 /*--------------------------------------------------------------
   2.0 Columns
 --------------------------------------------------------------*/
 
-.ksd-section.has-columns {
+:where(.ksd-section.has-columns) {
+	position: relative;
+
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	width: 100%;
+	grid-template-columns: 1fr;
+	gap: var(--spacing-s);
+
+	width: calc(100% - var(--spacing-s));
 	max-width: var(--viewport-max);
+
+	margin-inline: auto;
+}
+
+@media (min-width: 1000px) {
+	:where(.ksd-section.has-columns) {
+		grid-template-columns: 1fr 1fr;
+		width: calc(100% - var(--spacing-l));
+	}
 }
 
 /*--------------------------------------------------------------
   3.0 Card
 --------------------------------------------------------------*/
 
-.ksd-section.has-card > * {
+:where(.ksd-section.has-card > *) {
 	align-self: center; /* IE support */
 }
 
-.ksd-section.has-card .hero__card,
-.ksd-section.has-card .section__card {
+:where(.ksd-section.has-card .hero__card),
+:where(.ksd-section.has-card .section__card) {
 	grid-area: 1 / 1;
 	justify-self: center;
 
@@ -59,8 +71,8 @@
 	z-index: 2;
 }
 
-.ksd-section.has-card .hero__background-image,
-.ksd-section.has-card .section__background-image {
+:where(.ksd-section.has-card .hero__background-image),
+:where(.ksd-section.has-card .section__background-image) {
 	grid-area: 1 / 1;
 	justify-self: center;
 	max-width: 100%;
@@ -88,6 +100,15 @@
 }
 
 @media (min-width: 800px) {
+	/* Reverse column order */
+	.ksd-section.ksd-section.has-columns.is-reversed div:first-child {
+		grid-area: 1 / 2;
+	}
+
+	.ksd-section.ksd-section.has-columns.is-reversed div:last-child {
+		grid-area: 1 / 1;
+	}
+
 	.ksd-section.has-card .hero__background-image:not(.is-full-width),
 	.ksd-section.has-card .section__background-image:not(.is-full-width) {
 		margin: 2rem 10rem;

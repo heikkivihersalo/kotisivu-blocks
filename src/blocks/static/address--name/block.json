@@ -1,0 +1,35 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "ksd/address--name",
+	"title": "Name",
+	"category": "design",
+	"icon": "store",
+	"description": "Simple name field for contact information",
+	"keywords": ["name"],
+	"textdomain": "kotisivu-theme-blocks",
+	"supports": {
+		"className": false
+	},
+	"parent": ["ksd/address"],
+	"editorScript": "file:../../../../build/js/address--name/address--name.js",
+	"editorStyle": "file:../../../../build/css/address--name.css",
+	"style": "file:../../../../build/css/style-address--name.css",
+	"attributes": {
+		"name": {
+			"type": "string"
+		},
+		"nameClass": {
+			"type": "string",
+			"default": "address__content address__content--name"
+		},
+		"iconClass": {
+			"type": "string",
+			"default": "fas fa-at"
+		},
+		"iconToggle": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

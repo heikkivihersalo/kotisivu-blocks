@@ -1,28 +1,37 @@
 import { __ } from "@wordpress/i18n"
 import Inspector from './components/Inspector'
-import Buttons from './components/Buttons'
-import { useBlockProps } from "@wordpress/block-editor"
+import { useBlockProps, RichText } from "@wordpress/block-editor"
+import { useRef } from '@wordpress/element';
 
 import './editor.css';
 
 const Edit = (props) => {
 	const {
 		attributes: {
-			isPrimary,
-			isSecondary,
-			hasOutline,
+			linkText
 		},
+		setAttributes
 	} = props;
 
-	const blockProps = useBlockProps({
-		className: `btn${isPrimary ? ' btn--clr-primary' : ''}${isSecondary ? ' btn--clr-secondary' : ''}${hasOutline ? ' btn--outline' : ''}`
-	});
+
+	const ref = useRef();
+	const richTextRef = useRef();
+
+	const blockProps = useBlockProps(ref);
 
 	return (
-		<>
+		<div {...blockProps}>
 			<Inspector {...props} />
-			<Buttons props={props} blockProps={blockProps} editor />
-		</>
+			<RichText
+				ref={richTextRef}
+				aria-label={__('Button text')}
+				placeholder={__('Add text…')}
+				className={`btn`}
+				value={linkText}
+				onChange={(content) => setAttributes({ linkText: content })}
+				withoutInteractiveFormatting
+			/>
+		</div>
 	);
 };
 

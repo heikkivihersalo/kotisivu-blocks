@@ -7,7 +7,7 @@
 	"icon": "columns",
 	"description": "Block for adding semantic sections to the site",
 	"keywords": ["section, container"],
-	"textdomain": "section",
+	"textdomain": "kotisivu-theme-blocks",
 	"supports": {
 		"className": false
 	},
