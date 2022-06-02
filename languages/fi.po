@@ -1,0 +1,254 @@
+# Copyright (C) 2022 Kotisivu Dev
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kotisivu Blocks - Jessikka Aro 1.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/kotisivu-theme-"
+"blocks\n"
+"POT-Creation-Date: 2022-05-27T09:10:21+00:00\n"
+"PO-Revision-Date: 2022-05-27 12:10+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+"X-Domain: kotisivu-theme-blocks\n"
+
+#. Plugin Name of the plugin
+msgid "Kotisivu Blocks - Jessikka Aro"
+msgstr "Kotisivu Blocks - Jessikka Aro"
+
+#. Description of the plugin
+msgid "Gutenberg Block plugin for Kotisivu Theme"
+msgstr "Gutenberg Block -lisäosa kotisivuteemalle"
+
+#. Author of the plugin
+msgid "Kotisivu Dev"
+msgstr "Kotisivu Dev"
+
+#: src/blocks/dynamic/blog-grid/render.php:38
+msgid "Posted on:"
+msgstr "Julkaistu:"
+
+#: src/blocks/dynamic/blog-grid/render.php:42
+msgid "Read more"
+msgstr "Lue lisää"
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/icon/icon.js:1
+msgid "Icon Settings"
+msgstr "Kuvakeasetukset"
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1
+msgid "Add icon"
+msgstr "Lisää-kuvake"
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/icon/icon.js:1
+msgid "Custom Icon Code"
+msgstr "Mukautetun kuvakekoodin koodi"
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/icon/icon.js:1
+msgid "For example fas fa-user"
+msgstr "Esimerkiksi fas fa-user"
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/button/button.js:1
+msgid "Analytics"
+msgstr "Analytiikat"
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/button/button.js:1
+#, fuzzy
+msgid "Track Events"
+msgstr "Tapahtumien seuraaminen"
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/button/button.js:1
+msgid "Identifier"
+msgstr "Identifiointitunnus"
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1 build/js/button/button.js:1
+#, fuzzy
+msgid "ex. name for this button"
+msgstr "esimerkiksi tämän painikkeen nimi"
+
+#: build/js/blog-grid/blog-grid.js:1
+msgid "Query Settings"
+msgstr "Kyselyn asetukset"
+
+#: build/js/book-container/book-container.js:1
+msgid "Add new book"
+msgstr "Lisää uusi kirja"
+
+#: build/js/book/book.js:1 build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1 build/js/section/section.js:1
+msgid "Change image"
+msgstr "Vaihda kuva"
+
+#: build/js/book/book.js:1 build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1 build/js/section/section.js:1
+msgid "Remove image"
+msgstr "Poista kuva"
+
+#: build/js/book/book.js:1 build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1 build/js/section/section.js:1
+msgid "Lazy Load"
+msgstr "Lazy Load"
+
+#: build/js/column-container/column-container.js:1
+msgid "Add new column"
+msgstr "Lisää uusi palsta"
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+#: build/js/section/section.js:1
+msgid "Reverse Block Alignment"
+msgstr "Käännä lohkon järjestys"
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+msgid "Container Settings"
+msgstr "Sisältöalueen asetukset"
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+msgid "Add wrapper Container"
+msgstr "Lisää säiliö"
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Add new icon"
+msgstr "Lisää uusi kuvake"
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Empty"
+msgstr "Tyhjä"
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Social Icons"
+msgstr "Some-kuvakkeet"
+
+#: build/js/icon/icon.js:1
+msgid "Link Settings"
+msgstr "Linkin asetukset"
+
+#: build/js/icon/icon.js:1
+msgid "Link URL"
+msgstr "Linkin URL-osoite"
+
+#: build/js/icon/icon.js:1
+msgid "Link Title"
+msgstr "Linkin otsikko"
+
+#: build/js/image-gallery/image-gallery.js:1
+#, fuzzy
+msgid "Image Gallery Settings"
+msgstr "Kuvagallerian asetukset"
+
+#: build/js/image-gallery/image-gallery.js:1
+msgid "Section Heading"
+msgstr "Osaston otsikko"
+
+#: build/js/image-gallery/image-gallery.js:1
+#, fuzzy
+msgid ""
+"Add some descriptive information (ex. title or heading) for assistive "
+"technologies"
+msgstr "Lisää aputekniikoita kuvaavia tietoja (esim. otsikko tai otsikko)"
+
+#: build/js/image-gallery/image-gallery.js:1
+#, fuzzy
+msgid "Selected images will be shown here"
+msgstr "Valitut kuvat näkyvät tässä"
+
+#: build/js/price/price.js:1
+msgid "Price Settings"
+msgstr "Hinta-asetukset"
+
+#: build/js/review-container/review-container.js:1
+msgid "Add new review"
+msgstr "Lisää uusi arvostelu"
+
+#: build/js/review/review.js:1
+msgid "Add text here"
+msgstr "Lisää teksti tähän"
+
+#: build/js/section/section.js:1
+msgid "Full Width"
+msgstr "Koko näytön levyinen"
+
+#: build/js/section/section.js:1
+msgid "Image Class"
+msgstr "Kuvaluokka"
+
+#: build/js/section/section.js:1
+msgid "e.g. section-name__image"
+msgstr "esim. name__image"
+
+#: build/js/section/section.js:1
+msgid "Select background image"
+msgstr "Valitse taustakuva"
+
+#: build/js/section/section.js:1
+msgid "Use Background Image"
+msgstr "Käytä taustakuvaa"
+
+#: build/js/section/section.js:1
+msgid "Section Settings"
+msgstr "Osa-asetukset"
+
+#: build/js/section/section.js:1
+msgid "Empty Section"
+msgstr "Tyhjä osa"
+
+#: build/js/section/section.js:1
+msgid "Hero - Front Page"
+msgstr "Hero - Etusivu"
+
+#: src/blocks/dynamic/blog-grid/block.json
+msgctxt "block title"
+msgid "Blog Grid"
+msgstr "Blogi Grid"
+
+#: src/blocks/dynamic/blog-grid/block.json
+#, fuzzy
+msgctxt "block description"
+msgid "Grid view of blog posts"
+msgstr "Blogijulkaisujen ruudukkonäkymä"
+
+#: src/blocks/dynamic/blog-grid/block.json
+#, fuzzy
+msgctxt "block keyword"
+msgid "blog, grid"
+msgstr "blogi, ruudukko"
+
+#: src/blocks/dynamic/footer-navigation/block.json
+msgctxt "block title"
+msgid "Footer Navigation"
+msgstr "Alapalkin navigaatio"
+
+#: src/blocks/dynamic/footer-navigation/block.json
+#, fuzzy
+msgctxt "block description"
+msgid "Simplified footer navigation"
+msgstr "Yksinkertaistettu alatunnisteen navigointi"
+
+#: src/blocks/dynamic/footer-navigation/block.json
+#, fuzzy
+msgctxt "block keyword"
+msgid "footer, navigation"
+msgstr "alatunniste, navigointi"

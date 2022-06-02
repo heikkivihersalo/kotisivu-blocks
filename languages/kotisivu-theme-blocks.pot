@@ -1,0 +1,253 @@
+# Copyright (C) 2022 Kotisivu Dev
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Kotisivu Blocks - Jessikka Aro 1.5.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/kotisivu-theme-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-05-27T09:10:21+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: kotisivu-theme-blocks\n"
+
+#. Plugin Name of the plugin
+msgid "Kotisivu Blocks - Jessikka Aro"
+msgstr ""
+
+#. Description of the plugin
+msgid "Gutenberg Block plugin for Kotisivu Theme"
+msgstr ""
+
+#. Author of the plugin
+msgid "Kotisivu Dev"
+msgstr ""
+
+#: src/blocks/dynamic/blog-grid/render.php:38
+msgid "Posted on:"
+msgstr ""
+
+#: src/blocks/dynamic/blog-grid/render.php:42
+msgid "Read more"
+msgstr ""
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/icon/icon.js:1
+msgid "Icon Settings"
+msgstr ""
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1
+msgid "Add icon"
+msgstr ""
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/icon/icon.js:1
+msgid "Custom Icon Code"
+msgstr ""
+
+#: build/js/address--address/address--address.js:1
+#: build/js/address--email/address--email.js:1
+#: build/js/address--name/address--name.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/icon/icon.js:1
+msgid "For example fas fa-user"
+msgstr ""
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/button/button.js:1
+msgid "Analytics"
+msgstr ""
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/button/button.js:1
+msgid "Track Events"
+msgstr ""
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/button/button.js:1
+msgid "Identifier"
+msgstr ""
+
+#: build/js/address--email/address--email.js:1
+#: build/js/address--phone/address--phone.js:1
+#: build/js/button/button.js:1
+msgid "ex. name for this button"
+msgstr ""
+
+#: build/js/blog-grid/blog-grid.js:1
+msgid "Query Settings"
+msgstr ""
+
+#: build/js/book-container/book-container.js:1
+msgid "Add new book"
+msgstr ""
+
+#: build/js/book/book.js:1
+#: build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1
+#: build/js/section/section.js:1
+msgid "Change image"
+msgstr ""
+
+#: build/js/book/book.js:1
+#: build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1
+#: build/js/section/section.js:1
+msgid "Remove image"
+msgstr ""
+
+#: build/js/book/book.js:1
+#: build/js/icon/icon.js:1
+#: build/js/optimized-image/optimized-image.js:1
+#: build/js/section/section.js:1
+msgid "Lazy Load"
+msgstr ""
+
+#: build/js/column-container/column-container.js:1
+msgid "Add new column"
+msgstr ""
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+#: build/js/section/section.js:1
+msgid "Reverse Block Alignment"
+msgstr ""
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+msgid "Container Settings"
+msgstr ""
+
+#: build/js/column-container/column-container.js:1
+#: build/js/review-container/review-container.js:1
+msgid "Add wrapper Container"
+msgstr ""
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Add new icon"
+msgstr ""
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Empty"
+msgstr ""
+
+#: build/js/icon-container/icon-container.js:1
+msgid "Social Icons"
+msgstr ""
+
+#: build/js/icon/icon.js:1
+msgid "Link Settings"
+msgstr ""
+
+#: build/js/icon/icon.js:1
+msgid "Link URL"
+msgstr ""
+
+#: build/js/icon/icon.js:1
+msgid "Link Title"
+msgstr ""
+
+#: build/js/image-gallery/image-gallery.js:1
+msgid "Image Gallery Settings"
+msgstr ""
+
+#: build/js/image-gallery/image-gallery.js:1
+msgid "Section Heading"
+msgstr ""
+
+#: build/js/image-gallery/image-gallery.js:1
+msgid "Add some descriptive information (ex. title or heading) for assistive technologies"
+msgstr ""
+
+#: build/js/image-gallery/image-gallery.js:1
+msgid "Selected images will be shown here"
+msgstr ""
+
+#: build/js/price/price.js:1
+msgid "Price Settings"
+msgstr ""
+
+#: build/js/review-container/review-container.js:1
+msgid "Add new review"
+msgstr ""
+
+#: build/js/review/review.js:1
+msgid "Add text here"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Full Width"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Image Class"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "e.g. section-name__image"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Select background image"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Use Background Image"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Section Settings"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Empty Section"
+msgstr ""
+
+#: build/js/section/section.js:1
+msgid "Hero - Front Page"
+msgstr ""
+
+#: src/blocks/dynamic/blog-grid/block.json
+msgctxt "block title"
+msgid "Blog Grid"
+msgstr ""
+
+#: src/blocks/dynamic/blog-grid/block.json
+msgctxt "block description"
+msgid "Grid view of blog posts"
+msgstr ""
+
+#: src/blocks/dynamic/blog-grid/block.json
+msgctxt "block keyword"
+msgid "blog, grid"
+msgstr ""
+
+#: src/blocks/dynamic/footer-navigation/block.json
+msgctxt "block title"
+msgid "Footer Navigation"
+msgstr ""
+
+#: src/blocks/dynamic/footer-navigation/block.json
+msgctxt "block description"
+msgid "Simplified footer navigation"
+msgstr ""
+
+#: src/blocks/dynamic/footer-navigation/block.json
+msgctxt "block keyword"
+msgid "footer, navigation"
+msgstr ""
